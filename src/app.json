@@ -1,0 +1,50 @@
+
+{
+	"pages": [
+
+		"pages/index/index",
+		"pages/withdraw/withdraw",
+		"pages/person/person",
+		"pages/index/lamp/lamp",
+		"pages/index/password/password",
+		"pages/index/password/search/search",
+		"pages/person/issue/complaint/complaint",
+		"pages/person/issue/issue",
+		
+		"pages/record/record",	
+		"pages/voice/voice",
+		"pages/interesting/interesting"
+	],
+	"window": {
+		"navigationBarTitleText": "包你说",
+		"backgroundTextStyle": "white",
+		"navigationBarBackgroundColor": "#d95940",
+		"navigationBarTextStyle": "white"
+	},
+	"networkTimeout": {
+		"request": 60000
+	},
+	"tabBar": {
+		"color": "#aeaeae",
+		"selectedColor": "#d95940",
+		"backgroundColor": "#fff",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "images/icon_redPackage.png",
+			"selectedIconPath": "images/icon_redPackage_ed.png",
+			"text": "发红包"
+		},
+		{
+			"pagePath": "pages/interesting/interesting",
+			"iconPath": "images/icon_redPackage.png",
+			"selectedIconPath": "images/icon_redPackage_ed.png",
+			"text": "更多好玩"
+		},
+		{
+			"pagePath": "pages/person/person",
+			"iconPath": "images/icon_redPackage.png",
+			"selectedIconPath": "images/icon_redPackage_ed.png",
+			"text": "我的"
+		}]
+	}
+}

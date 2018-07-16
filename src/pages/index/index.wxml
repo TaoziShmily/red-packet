@@ -1,0 +1,61 @@
+<!--index.wxml-->
+<!-- <import src="../../templates/video-list/video-list" /> -->
+<view class="index">
+	<view class="mask" wx:if="{{!hasUserInfo && canIUse}}">
+	<!-- <button class="bg-red showFlag color-white fz-15" wx:if="{{showFlag}}" open-type="openSetting" bindopensetting="handler">打开授权</button> -->
+	</view>
+	<view class="main border bg-white">
+		<!-- 用户头像 -->
+		<view class="userinfo">
+		    <button class="bg-red getUserInfo color-white fz-15" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取用户信息 </button>
+		    <block wx:else>
+		      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+		    </block>
+		</view>
+		<!-- end -->
+		<!-- 信息填写 -->
+		<view class="info box box-tb box-align-center">
+			<view class="info-list fz-15">
+
+				<navigator  class="info box box-lr box-align-center box-pack-start" url="/pages/index/password/password">
+					<view class="info_name">设置口令</view>
+					<view class="info_content border_bottom" >
+						<input placeholder="设置口令" disabled='true' />
+					</view>
+				</navigator>
+
+				<view wx:for="{{infos}}" wx:for-item="info" wx:key="item" class="info box box-lr box-align-center box-pack-start">
+					<view class="info_name">{{info.name}}</view>
+					<view class="info_content border_bottom">
+						<input placeholder="{{info.placeholder}}" type="{{info.type}}" />
+					</view>
+				</view>
+				<view class="tips box box-lr box-align-center fz-13">
+					<navigator url="/pages/voice/voice">小伙伴们说对口令就能领随机的红包</navigator>
+					<image src="/images/icon-yiwen.png"></image>
+				</view>
+			</view>
+			<view class="service-charge fz-13 color-gray">
+				需支付￥0.00服务费
+			</view>
+			<button class="submit color-white fz-15"> 生成语音红包 </button>
+		</view>
+		<!-- end -->
+	</view>
+	<!-- 广告位置 -->
+	<image bindtap="bindViewTap" class="ads" src="/images/WechatIMG1334.png" mode="cover"></image>
+	<!-- 底部标注 -->
+	<view class="box box-lr box-pack-center fz-14 color-blue" style="margin-top:45rpx;">
+		<navigator class="record" url="/pages/record/record">我的记录</navigator>
+		<view class="service">
+			<button class="fz-14 color-blue " open-type="contact" session-from="weapp">
+				联系客服
+			</button>
+		</view>
+		
+	</view>
+	<navigator class="lamp-box bg-white" url="/pages/index/lamp/lamp">
+		<image src="/images/icon_lamp.png">
+		</image>
+	</navigator>
+</view>

@@ -1,0 +1,29 @@
+<view>
+	<view class="contact">
+		<button class="fz-14 color-blue " open-type="contact" session-from="weapp">
+			联系客服
+		</button>
+	</view>
+	<view class="main bg-white border fz-14">
+		<view class="account-balance">账户余额<text class="money color-gray fz-21 account-balance-count">{{balance}}</text><text class="color-gray"> 元</text></view>
+		<view class="withdraw-balance">提现余额</view>
+		<view class="withdraw-balance-count border_bottom font-weight box box-align-start">
+			<view class="fz-16">￥</view>
+			<input  type="number" class="fz-30 color-black withdraw-balance-input" bindinput="getInputValue" />
+		</view>
+		<view class="color-gray all-withdraw">提现到微信红包，<text class="color-blue">全部提现</text></view>
+		<button class="btn fz-15 color-white bg-green">提现</button>	
+		<view class="color-gray fz-13 text-center tips">1-5个工作日到账</view>
+	</view>
+	<view class="activity  fz-14">
+		<view class="activity-tips text-center color-gray box box-pack-center box-align-center"><view class="before"></view>你还可以参加以下活动<view class="after"></view></view>
+		<view class="activity-main bg-white box box-lr box-align-center">
+			<image class="userinfo-avatar" src="{{userinfo.avatar}}"></image>
+			<view class="item_center box box-tb box-pack-between">
+				<view class="activity-name color-black">超级好玩的翻拍红包</view>
+				<view class="activity-desc color-gray">保证你会爱上这款游戏</view>
+			</view>
+			<view class="btn activity-btn color-yellow fz-14 text-center">去看看</view>
+		</view>
+	</view>
+</view>

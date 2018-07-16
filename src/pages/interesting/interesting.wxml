@@ -1,0 +1,11 @@
+<!-- interesting.wxml -->
+<view class="list-box">
+	<navigator url="{{item.url}}" wx:for="{{list}}" wx:for-item="item" wx:key="item" class="list bg-white box box-lr box-align-center">
+		<image class="item_image" src="{{item.src}}"></image>
+		<view class="item_center box box-tb box-pack-between">
+			<view class="item_name color-black fz-16">{{item.name}}</view>
+			<view class="item_desc color-gray fz-13">{{item.desc}}</view>
+		</view>
+		<view class="btn item_text color-yellow fz-14 bg-red">{{item.text}}</view>
+	</navigator>
+</view>

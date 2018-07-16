@@ -1,0 +1,147 @@
+/*index.less*/
+
+.main{
+	width: 690rpx;
+	height: 680rpx;
+	margin:110rpx auto 20rpx;
+	box-shadow: 0 0 10rpx #e1e1e1;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  border: 10rpx solid #fff;
+  position: absolute;
+  top:30rpx;
+  left: 50%;
+  margin-left: -64rpx;
+}
+.info-list{
+	padding:110rpx 60rpx 0rpx 60rpx;	
+	position: relative;
+	&:after{
+		width: 0;
+		height: 0;
+		content: "";
+		border-left: 13rpx solid transparent;
+		border-top: 17rpx solid #666;
+		border-right: 13rpx solid transparent;
+		position: absolute;
+		top: 130rpx;
+		right: 100rpx;
+	}
+	
+	.tips{
+		position: absolute;
+		top:160rpx;
+		left: 65rpx;
+		color: #999;
+		image{
+			width: 30rpx;
+			height: 30rpx;
+			margin-left: 10rpx;
+		}
+	}
+	.info{
+		margin-bottom: 80rpx;
+	}
+	.info_name{
+		margin-right: 25rpx;
+	}
+	.info_content{
+		width: 418rpx;
+	}
+}
+.submit{
+	width: 562rpx;
+	height: 85rpx;
+	line-height: 85rpx;
+	border-radius: 50rpx;
+	margin-top:18rpx;
+	margin-bottom: 40rpx; 
+}
+button{
+	background-color: #d95940;
+}
+.ads{
+	width: 690rpx;
+	height: 140rpx;
+	margin: 0 auto;	
+}
+.record ,.service{
+	padding: 0 33rpx;
+	button{
+		padding-left: 0;
+		padding-right: 0;
+		background-color:#f1f1f1;
+		margin-top: -10rpx;
+	}
+}
+
+.record{
+	position: relative;
+	&::after{
+		width:3rpx;
+		height: 25rpx;
+		content: "";
+		background-color: #c6c6c6;
+		position: absolute;
+		right: 0;
+		top:8rpx;
+
+	}
+}
+.lamp-box{
+	width: 120rpx;
+	height: 80rpx;
+	box-shadow: 0rpx 0rpx 20rpx #ccc;
+	border-radius: 60rpx 0 0 60rpx;
+	position: fixed;
+	right: 0;
+	top: 150rpx;
+	z-index:2;
+	image{
+		width: 60rpx;
+		height: 60rpx;
+		position: relative;
+		top: 50%;
+		left: 50%;
+		margin-left: -30rpx;
+		margin-top: -30rpx;
+	}
+}
+
+.mask{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.7);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 5;
+}
+.getUserInfo{
+	width: 300rpx;
+	height: 100rpx;
+	line-height: 100rpx;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -150rpx;
+	margin-top: -50rpx;
+	z-index: 9;
+}
+.showFlag{
+	width: 300rpx;
+	height: 100rpx;
+	line-height: 100rpx;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -150rpx;
+	margin-top: -50rpx;
+	z-index: 99;
+}
+
+
+

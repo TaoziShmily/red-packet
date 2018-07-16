@@ -1,0 +1,48 @@
+<view class="search">
+	<view class="bg-red">
+		<view class="box fz-15 top">
+			<input class="search-input bg-white" placeholder="请输入自定义口令..." bindinput="bindinputTap"/>
+			<button class="btn search-btn fz-15 {{inputValue ? 'color-red' : 'color-gray'}}" bindtap="creatPwdTap">{{btn}}</button>
+		</view>
+		<view class="tips fz-12 text-center">创建自定义口令需经过人工审核，请勿输入违禁内容</view>
+	</view>
+	<view wx:if="{{!inputValue}}">
+		<!-- 我的口令 -->
+		<view class="my-password ">
+			<view class="title fz-12 ">我的口令</view>
+			<view class=" fz-14 color-gray" wx:for="{{myPwd}}" wx:key="item">
+				<view class="name">{{item.name}}</view>
+			</view>
+		</view>
+		<!-- 热门口令 -->
+		<view class="hot-password ">
+			<view class="title fz-12 ">热门口令</view>
+			<view class=" fz-14 color-gray" wx:for="{{hotPwd}}" wx:key="item">
+				<view class="name">{{item.name}}</view>
+			</view>
+		</view>
+	</view>
+	<!-- 搜索结果 -->
+	<view class="result-password" wx:else>
+		<view class=" fz-15 color-black resultPwd border_bottom" wx:for="{{resultPwd}}" wx:key="item">
+			<view class="name">{{item.name}}</view>
+		</view>
+	</view>
+	<!-- 创建成功弹框 -->
+	<view class="mask color-red" wx:if="{{creatPwd}}">
+		<view class="bg-white box box-tb box-pack-center box-align-center">
+			<image src="/images/WechatIMG1350.jpg">
+			</image>
+			<view>恭喜你</view>
+			<view>口令已通过审核</view>
+			<button class="btn bg-red color-white fz-15" bindtap="usePwdTap">马上使用</button>
+		</view>
+	</view>
+</view>
+
+
+
+
+
+
+

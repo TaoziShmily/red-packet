@@ -1,0 +1,34 @@
+<!-- record.wxml -->
+<view >
+    <view class="tab-h fz-16 bg-white box box-pack-center box-pack-around color-gray">
+        <view class="tab-item {{currentTab==0?'active':''}}"  data-current="0" bindtap="swichNav">我发出的</view>
+        <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">我收到的</view>
+    </view>
+    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab"
+     style="height:{{winHeight}}rpx">
+        <swiper-item wx:for="{{[0,1]}}" wx:for-item="item">
+            <scroll-view scroll-y="true" class="scoll-h" >
+                <view class="userinfo box box-tb box-align-center">
+					<image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+                    <view  class="userinfo-nickname color-black fz-14">
+                        <text class="color-blue">{{userInfo.nickName}}</text> 
+                        <text wx:if="{{currentTab==0}}">共发出</text> 
+                        <text wx:else>共收到</text> 
+                    </view>
+				</view>
+                <view class="box box-pack-center box-pack-around color-gray fz-15 mt-60">
+                    <view class="box box-align-center box-tb">
+                        <view>金额(元)</view>
+                        <view class="color-black font-weight">0.00</view>
+                    </view>
+                    <view class="box box-align-center box-tb">
+                        <view>数量(个)</view>
+                        <view class="color-black font-weight">0</view>
+                    </view>
+                </view>
+                <navigator class="color-blue quesion fz-14" url="/pages/person/issue/issue">常见问题</navigator>
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+
+</view>

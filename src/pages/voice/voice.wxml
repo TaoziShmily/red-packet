@@ -1,0 +1,39 @@
+<!-- voice.wxml -->
+
+<view class="voice bg-white">
+	<view class="header box box-tb box-align-center bg-red">
+		<image src="/images/WechatIMG1349.jpg"></image>
+		<view class="name color-light-yellow fz-14">包你说</view>
+		<view class="title fz-24 color-yellow text-center">进入包你说公众号，点击更多福利，你一定会喜欢</view>
+		<view class="btn fz-16 "><button class="color-light-yellow bg-light-red">红包都被领完了</button></view>
+		<view class="box box-pack-between color-white fz-14 flex">
+			<view  class="box  box-align-center" bindtap="goWithdrawPage"><image class="icon" src="/images/icon_qian.png"></image>去提现</view>
+			<view class="box  box-align-center" bindtap="goHomePage"><image src="/images/icon_hongbao.png"></image>发语音红包</view>
+			<view class="box  box-align-center" bindtap="onShareAppMessage"><image src="/images/icon_zhuanfa.png"></image>去转发</view>
+		</view>
+	</view>
+	<view class="box box-pack-between fz-13 tips pd-l-r-30">
+		<view class="color-gray">共1000.00元，已领取100/1000个</view>
+		<navigator class="color-blue" url="/pages/person/issue/complaint/complaint">投诉</navigator>
+	</view>
+	<view class="ads">
+		<image src="{{adsImage}}" data-src="{{adsImage}}" bindtap="previewImage"></image>
+	</view>
+	<view class="list box box-pack-between fz-13 color-black border" wx:for="{{list}}" wx:key="item">
+		<view class="box">
+			<image src="{{item.avator}}" class="avator"></image>
+			<view>
+				<view class="box box-align-center">
+					<view class="name color-black font-weight">{{item.name}}</view>
+					<view wx:if="{{item.sex == female }}" class="sex" ><image src="/images/icon_nv.png"></image></view>
+					<view wx:else class="sex" ><image src="/images/icon_nv.png"></image></view>
+				</view>
+				<view class="duration">{{item.duration}}''</view>
+			</view>
+		</view>
+		<view class="box box-tb box-pack-end">
+			<view class="money color-black font-weight">{{item.money}}元</view>
+			<view class="time color-gray">{{item.time}}</view>
+		</view>
+	</view>
+</view>

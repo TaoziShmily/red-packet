@@ -1,0 +1,51 @@
+/*record.css*/
+
+.tab-h{
+    height: 100rpx;
+    width: 100%; 
+    box-sizing: border-box;
+    overflow: hidden;
+    line-height: 100rpx;
+    white-space: nowrap;
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    z-index: 99;
+}
+
+.tab-item.active{
+	color: #d95940;
+	position: relative;
+	&:after{
+		content: "";
+		display: block;
+		height: 8rpx;
+		width: 90rpx;
+		background: #d95940;
+		position: absolute; 
+		bottom: 0;
+		left: 20rpx;
+	}
+}
+.tab-content{
+	margin-top: 100rpx;
+}
+.userinfo-avatar{
+	width: 128rpx;
+	height: 128rpx;
+	border-radius: 50%;
+	margin: 25rpx auto;
+}
+.quesion{
+	position: fixed;
+	width: 100%;
+	text-align: center;
+	bottom: 0rpx;
+}
+
+
+
+
+
+
+

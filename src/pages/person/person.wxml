@@ -1,0 +1,19 @@
+<!-- person.wxml -->
+<view class="person">
+	<view class="userinfo bg-red box box-tb box-align-center">
+		<image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+		<text class="userinfo-nickname color-white fz-14">{{userInfo.nickName}}</text>
+	</view>
+	<view class="list-box">
+		<view class="fz-14 color-gray count">0.00元</view>
+		<navigator wx:for="{{list}}" wx:for-item="item" wx:key="item" class="list bg-white box box-align-center" url="{{item.url}}">
+			<image class="item_image" src="{{item.src}}"></image>
+			<view class="item_name color-black fz-16">{{item.name}}</view>
+		</navigator>
+		<button open-type="contact" class="list bg-white box box-align-center" url="{{item.url}}">
+			<image class="item_image" src="/images/icon_kefu.png"></image>
+			<view class="item_name color-black fz-16">联系客服</view>
+		</button>
+	</view>
+
+</view>

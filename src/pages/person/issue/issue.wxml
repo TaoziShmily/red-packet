@@ -1,0 +1,14 @@
+<!-- issue.wxml -->
+<!-- 问题列表 -->
+<view class="c-category bg-white fz-15 color-black {{c.is_open ? 'is-open' : ''}}" wx:for="{{category}}" wx:for-item="c" wx:key="c.id">
+  <view class="c-category__title" bindtap="toggleCategory" data-index="{{index}}">{{c.name}}</view>
+  <view class="c-category__details">
+    <view class="c-category__item" wx:for="{{c.kb}}" wx:key="item.id">{{item.title}}</view>
+  </view>
+</view>
+<button class="btn fz-15 color-white bg-green" open-type="contact">联系在线客服</button>	
+<!-- 底部标注 -->
+<view class="box box-lr box-pack-center fz-14" >
+	<view class="color-gray version">1.0.0</view>
+	<navigator class="color-blue complain" url="/pages/person/issue/complaint/complaint">投诉</navigator>
+</view>
